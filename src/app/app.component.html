@@ -1,0 +1,21 @@
+<div class="main-wrapper">
+  <div class="main-container">
+    <div class="selection-container">
+      <select #c1 name="" id="country1" (mouseleave)="changeBase(c1.value)">
+        <option value="USD">US Dollar</option>
+        <option value="MXN">Mexican Peso</option>
+        <option value="EUR">Euro</option>
+      </select>
+      <p>TO</p>
+      <select #c2 name="" id="country1" (mouseleave)="toCountry(c2.value)">
+        <option value="USD">US Dollar</option>
+        <option value="MXN">Mexican Peso</option>
+        <option value="EUR">Euro</option>
+      </select>
+    </div>
+    <button (click)="convert()">Convert</button>
+    <div class="result-container">
+      <p>1 {{base}}</p> <p> = </p> <p>{{result}} {{country2}}</p>
+    </div>
+  </div>
+</div>
